@@ -1,13 +1,11 @@
 name: Java CI with Maven
 
-# 获取代码
 on:
   push:
-    branches: [ main ]
-  pull_request:
+    tags:
+      - 'v*' # 匹配所有以 v 开头的 Tag (例如: v2025.04.01)
     branches: [ main ]
 
-# 开始工作
 jobs:
   build:
     runs-on: ubuntu-latest
